@@ -1,6 +1,7 @@
+codeid = 3
 def getInteger():
-    print('333333333333 Python function getInteger() called')
+    print(str(codeid)+' Python function getInteger() called')
     c = 100*50/30
     return c
     
-print('333333333333 Python loaded')
+print(str(codeid)+' Python loaded')

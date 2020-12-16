@@ -1,24 +1,36 @@
-import arnav
+import secsgemdriver
+codeid=4
 def getInteger4():
-    arnav.printmsg('444444444 Python function getInteger4() called\n')
-    arnav.printmsg('444444444 call foo to C++\n')
-    #msg = arnav.printmsg("Neo Nghia Luong")
+    secsgemdriver.printmsg(str(codeid)+' Python function getInteger4() called\n')
+    secsgemdriver.printmsg(str(codeid)+' call foo to C++\n')
+    #msg = secsgemdriver.printmsg("Neo Nghia Luong")
     #print('444444444 printmsg return ', msg)
-    val = arnav.neoneo("NEONEO SEND FROM PY")
-    print('444444444 call foo to return ', val)
+    val = secsgemdriver.neoneo("NEONEO SEND FROM PY")
+    print(str(codeid)+' call foo to return ', val)
     c = 100*50/30
     return 77
 
 def processMsg(msg):
 	#print('Process msg called\n')
-	arnav.printmsg('Process msg called\n')
+	secsgemdriver.printmsg(str(codeid)+'Process msg called\n')
 	#print(msg)
 	arr = msg["msg"]
 	#print(arr)
 	#for item in arr:
 	#	print(item)
 	for key in arr:
-		arnav.printmsg(key + " = "+str(arr[key]))
+		secsgemdriver.printmsg(key + " = "+str(arr[key]))
+		
+	val = secsgemdriver.getdata(str(codeid)+"NEO NGHIA");
+	print(str(codeid)+"Val return secsgemdriver.getdata")
+	print(val)
+	
+	print("Test call get dict")
+	dictvalue = {"NEO": "NEOVALUE","NEO1": "NEOVALUE", "NEO2": "NEOVALUE", "NEO3": "NEOVALUE", "NEO4": "NEOVALUE", "NEO5": "NEOVALUE"}
+	print(dictvalue)
+	print(dictvalue["NEO"])
+	val = secsgemdriver.getdict( dictvalue );
+	print(val);
 	return 0
 	
 #processMsg("pyemd4 started....")
